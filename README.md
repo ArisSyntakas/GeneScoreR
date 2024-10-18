@@ -8,6 +8,9 @@ Paste the following code into the R console
 
 if (!requireNamespace("devtools", quietly = TRUE)) {
   install.packages("devtools")}
+  
 library(devtools)
+
 devtools::install_github("ArisSyntakas/GeneScoreR")
+
 library(GeneScoreR)
