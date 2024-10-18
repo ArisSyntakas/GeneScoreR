@@ -29,7 +29,7 @@ zscore <- function(scored_table, control_table) {
 
   row_sums <- rowSums(scored_standardized)
 
-  score_frame <- data.frame(Sum = row_sums)
+  score_frame <- data.frame(Zscore_sum = row_sums)
   score_frame$ID <- colnames(scored_table)
 
   return(score_frame)
