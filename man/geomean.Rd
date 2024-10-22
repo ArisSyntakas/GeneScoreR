@@ -7,7 +7,7 @@
 geomean(count_table)
 }
 \arguments{
-\item{count_table}{A data frame of gene count data (genes as rows, samples as columns).}
+\item{count_table}{A data frame of gene count data (genes as rows, samples as columns). All columns must be numeric.}
 }
 \value{
 A data frame with the geometric means per sample and the sample IDs.

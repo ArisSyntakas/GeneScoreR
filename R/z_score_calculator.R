@@ -3,8 +3,9 @@
 #' This function computes a Z-score sum for each sample in the given "scored" count table, based on
 #' the means and SDs of the genes in the control table.
 #'
-#' @param scored_table Data frame of samples to be scored (genes as rows, samples as columns).
-#' @param control_table Data frame of control samples (genes as rows, samples as columns).
+#' @importFrom stats sd
+#' @param scored_table Data frame of samples to be scored (genes as rows, samples as columns). All columns must be numeric.
+#' @param control_table Data frame of control samples (genes as rows, samples as columns). All columns must be numeric.
 #' @return A data frame with the sum of Z-scores per sample and the sample IDs.
 #' @export
 zscore <- function(scored_table, control_table) {
@@ -29,7 +30,7 @@ zscore <- function(scored_table, control_table) {
 
   row_sums <- rowSums(scored_standardized)
 
-  score_frame <- data.frame(Zscore_sum = row_sums)
+  score_frame <- data.frame(`Z-score sum` = row_sums)
   score_frame$ID <- colnames(scored_table)
 
   return(score_frame)

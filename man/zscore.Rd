@@ -7,9 +7,9 @@
 zscore(scored_table, control_table)
 }
 \arguments{
-\item{scored_table}{Data frame of samples to be scored (genes as rows, samples as columns).}
+\item{scored_table}{Data frame of samples to be scored (genes as rows, samples as columns). All columns must be numeric.}
 
-\item{control_table}{Data frame of control samples (genes as rows, samples as columns).}
+\item{control_table}{Data frame of control samples (genes as rows, samples as columns). All columns must be numeric.}
 }
 \value{
 A data frame with the sum of Z-scores per sample and the sample IDs.

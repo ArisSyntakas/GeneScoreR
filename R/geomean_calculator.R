@@ -2,7 +2,7 @@
 #'
 #' This function computes the geometric mean for each sample in the given count table.
 #'
-#' @param count_table A data frame of gene count data (genes as rows, samples as columns).
+#' @param count_table A data frame of gene count data (genes as rows, samples as columns). All columns must be numeric.
 #' @return A data frame with the geometric means per sample and the sample IDs.
 #' @export
 geomean <- function(count_table) {
@@ -18,7 +18,7 @@ geomean <- function(count_table) {
 
   geomeans <- apply(count_table, 2, geometric_mean)
 
-  score_frame <- data.frame(GeometricMean = geomeans)
+  score_frame <- data.frame(`Geometric Mean` = geomeans)
   score_frame$ID <- colnames(count_table)
 
   return(score_frame)
